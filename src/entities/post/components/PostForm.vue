@@ -4,13 +4,16 @@
         <!-- два разных способа сделать двусторонее связывание с моделью -->    
         <input v-model="post.title" class="newpost" type="text" placeholder="Name:">
         <input v-bind:value="post.body" @input="post.body = $event.target.value" class="newpost" type="text" placeholder="Desc:">
-        <button class="btn" @click="createPost">Addd</button>
+        <my-buttons class="post_btn" @click="createPost">Add</my-buttons>
     </form>
 </template>
 
 
 <script>
+    // import MyButtons from '@/shared/ui/MyButtons';
+
 export default {
+    // components: {MyButtons},
     data () {
         return {
             post: {
@@ -48,7 +51,7 @@ form {
     margin-top: 12px;
 }
 
-.btn {
+.post_btn {
     margin-top: 8px;
     align-self: flex-end;
     background: None;

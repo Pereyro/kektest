@@ -13,6 +13,7 @@
         <post-list :posts="posts"/>
         <!-- короткая запись: -->
         <!-- <post-list :posts="posts"></post-list> -->
+        <movie-item/>
     </div>
 </template>
 
@@ -21,9 +22,11 @@
 import PostForm from "@/entities/post/components/PostForm";
 import PostList from "@/entities/post/components/PostList";
 
+import MovieItem from "@/entities/film/MovieItem";
+
 export default {
     components: {
-        PostForm, PostList
+        PostForm, PostList, MovieItem,
     },
 
     data() {
@@ -32,9 +35,6 @@ export default {
             dislikes: 0,
             posts: [
                 {id: 1, title: 'Jopa1', body: 'Blabla'},
-                {id: 2, title: 'Jopa2', body: 'Blabla'},
-                {id: 3, title: 'Jopa3', body: 'Blabla'},
-                {id: 4, title: 'Jopa4', body: 'Blabla'},
             ],
             title: '',
             body: '',
