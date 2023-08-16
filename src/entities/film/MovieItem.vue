@@ -1,9 +1,16 @@
 <template>
     <div class="movie">
-        <h2>Movie name:</h2>
-        <p>
-            Blabalabla
+        <h3 class="movie_title">Movie name:</h3>
+        <p class="movie_annotation">
+            <img class="movie_icon"/>
+            This film is very intresting and very  tralala
         </p>
+        
+        <div>
+            <p>
+                Blabalabla
+            </p>
+        </div>
     </div>
 </template>
 
@@ -23,5 +30,20 @@
     margin-right: auto;
 }
 
+.movie_icon {
+    width:80px;
+    height:120px;
+    float:left;
+    margin-top: 8px;
+    margin-right: auto;
+    border: 3px solid teal;
+    bottom: 16px;
+}
+
+.movie_annotation {
+    margin-top: 16px;
+    margin-right: auto;
+    
+}
 
 </style>

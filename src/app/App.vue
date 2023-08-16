@@ -9,11 +9,17 @@
         <div>Count likes: <strong>{{ likes }}</strong></div>
         <div>Count dislikes:<strong>{{ dislikes }}</strong></div>
          
-        <post-form @create="createPost"/>
-        <post-list :posts="posts"
-        @remove="removePost"/>
-        <!-- короткая запись: -->
-        <!-- <post-list :posts="posts"></post-list> -->
+        <dialog-window :show="true">
+            <post-form 
+                @create="createPost"
+            />
+        </dialog-window>
+       
+        <post-list 
+        :posts="posts"
+        @remove="removePost"
+        />
+
         <movie-item/>
     </div>
 </template>
