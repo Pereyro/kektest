@@ -4,7 +4,9 @@
             <div><strong>Название:</strong>{{ post.title }}</div>
             <div><strong>description:</strong>{{ post.body }}</div>
         </div>
-        <my-buttons>delete</my-buttons>
+        <my-buttons
+        @click="$emit('remove', post)"
+        >delete</my-buttons>
     </div>
 </template>
 
@@ -28,6 +30,9 @@ export default {
     padding: 16px;
     border: 2px solid teal;
     margin-top: 16px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 </style>

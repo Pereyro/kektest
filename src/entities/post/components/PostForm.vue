@@ -2,8 +2,8 @@
     <form @submit.prevent>
         <h3>New post</h3>
         <!-- два разных способа сделать двусторонее связывание с моделью -->    
-        <input v-model="post.title" class="newpost" type="text" placeholder="Name:">
-        <input v-bind:value="post.body" @input="post.body = $event.target.value" class="newpost" type="text" placeholder="Desc:">
+        <kek-input v-model="post.title" type="text" placeholder="Name:" />
+        <kek-input v-model="post.body" type="text" placeholder="Desc:" />
         <my-buttons class="post_btn" @click="createPost">Add</my-buttons>
     </form>
 </template>

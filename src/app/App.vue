@@ -10,7 +10,8 @@
         <div>Count dislikes:<strong>{{ dislikes }}</strong></div>
          
         <post-form @create="createPost"/>
-        <post-list :posts="posts"/>
+        <post-list :posts="posts"
+        @remove="removePost"/>
         <!-- короткая запись: -->
         <!-- <post-list :posts="posts"></post-list> -->
         <movie-item/>
@@ -46,6 +47,9 @@ export default {
         createPost(post) {
             this.posts.push(post);
 
+        },
+        removePost(post) {
+            this.posts = this.posts.filter(p => p.id !== post.id)
         },
         inputTitle (event) {
             this.title = event.target.value;
