@@ -11,10 +11,10 @@
 </template>
 
 <script>
-// import MyButtons from '@/shared/ui/MyButtons';
+import MyButtons from '@/shared/ui/MyButtons';
 
 export default {
-    // components: {MyButtons},
+    components: {MyButtons},
     props: {
         post: {
             type: Object,
