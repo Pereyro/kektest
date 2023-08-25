@@ -1,9 +1,10 @@
 <template>
     <div class="navbar">
         <div class="navbar__buttons">
-            <button class="navbar__button"><strong>AFISHA</strong></button>
-            <button class="navbar__button">HISTORY</button>
-            <button class="navbar__button">BAR&GRILL</button>
+            <button class="navbar__button" @click="$router.push('/afisha')"><strong>AFISHA</strong></button>
+            <button class="navbar__button" @click="$router.push('/movies')">KEK HISTORY</button>
+            <button class="navbar__button" @click="$router.push('/posts')">COMMENTS</button>
+            <button class="navbar__button" @click="$router.push('/bargrill')">BAR&GRILL</button>
         </div>
     </div>
 </template>

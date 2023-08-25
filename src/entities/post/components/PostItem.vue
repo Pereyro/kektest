@@ -3,10 +3,14 @@
         <div>
             <div><strong>Название:</strong>{{ post.title }}</div>
             <div><strong>description:</strong>{{ post.body }}</div>
+            <p>{{ post.id }}</p>
         </div>
         <my-buttons
         @click="$emit('remove', post)"
         >delete</my-buttons>
+        <my-buttons
+        @click="$router.push(`/posts/${post.id}`)"
+        >view</my-buttons>
     </div>
 </template>
 

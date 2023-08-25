@@ -24,13 +24,13 @@ export default {
     background-repeat: no-repeat;
     background-size: cover; /* Растянуть изображение на весь элемент */
     background-position: center center; /* Позиционирование изображения по центру */
-    border: 8px solid forestgreen; /* Исправлено: добавьте "solid" для определения стиля границы */
     height: 100vh; /* Занимать всю высоту экрана */
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    align-items: center;
     /* justify-content: center; */
 }
+
 
 .title {
     color: aqua;

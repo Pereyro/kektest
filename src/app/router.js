@@ -3,6 +3,8 @@ import MainAuth from "@/pages/MainAuth";
 import AfishaMain from "@/pages/AfishaMain";
 import AfishaHist from "@/pages/AfishaHist";
 import PostsPage from "@/pages/PostsPage";
+import MoviePage from "@/pages/MoviePage";
+import PostPage from "@/pages/PostPage";
 
 import {createRouter, createWebHistory} from 'vue-router';
 
@@ -16,12 +18,20 @@ const routes = [
         component: AfishaMain
     },
     {
-        path: "/history",
+        path: "/movies",
         component: AfishaHist
+    },
+    {
+        path: "/movies/:id",
+        component: MoviePage
     },
     {
         path: "/posts",
         component: PostsPage
+    },
+    {
+        path: "/posts/:id",
+        component: PostPage
     }
 ]
 

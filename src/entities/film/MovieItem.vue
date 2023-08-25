@@ -8,13 +8,15 @@
         
         <div class="movie_annotation">
             <div><strong>Movie name:</strong> {{ film.title }}</div>
-            <div><strong>Movie description:</strong> {{ film.desc }} </div>
-            <div class="button_container">
-                <my-buttons>view</my-buttons>
-            </div>
+            <div><strong>Year:</strong> {{ film.year }}</div>
+            <div><strong>Annotation:</strong> {{ film.desc }} </div>
+            
         </div>
         
-        
+        <div class="button_container">
+                <my-buttons @click="$router.push(`/movies/${film.id}`)">read more</my-buttons>
+                <my-buttons @click="watchMovie" style="align-items: center;">watch</my-buttons>        
+        </div>
         
     </div>
 </template>
@@ -28,6 +30,11 @@ export default {
             type: Object,
             requared: true
         }
+    },
+    methods: {
+        watchMovie() {
+
+        }
     }
 }
 
@@ -40,8 +47,9 @@ export default {
     display: flex; 
     margin-top: 16px;
     padding: 16px;
-    border: 4px solid white;
+    border: 2px solid white;
     background: rgba(0, 0, 0, 0.5);
+    /* border-radius:; */
     /* align-items: center; */
     /* bottom: 16px; */
     /* margin-right: auto; */
@@ -70,5 +78,6 @@ export default {
     display: flex;
     justify-content: flex-end; /* Выравнивание элементов справа */
     margin-top: 16px;
+    margin-left: auto;
 }
 </style>

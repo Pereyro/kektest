@@ -8,7 +8,7 @@
 
         <div>Count likes: <strong>{{ likes }}</strong></div>
         <div>Count dislikes:<strong>{{ dislikes }}</strong></div>
-         
+        <button @click="fetchPosts">Get Posts</button>
         <my-buttons 
         style="margin: 15px 0;"
         @click="showDialog">Create post</my-buttons>
@@ -31,7 +31,7 @@
 <script>
 import PostForm from "@/entities/post/components/PostForm";
 import PostList from "@/entities/post/components/PostList";
-
+import axios from 'axios'
 
 
 export default {
@@ -43,9 +43,7 @@ export default {
         return {
             likes: 0, 
             dislikes: 0,
-            posts: [
-                {id: 1, title: 'Jopa1', body: 'Blabla'},
-            ],
+            posts: [],
             title: '',
             body: '',
             dialogVisible: false
@@ -62,6 +60,18 @@ export default {
         removePost(post) {
             this.posts = this.posts.filter(p => p.id !== post.id)
         },
+
+        async fetchPosts() {
+            try {
+                const response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10');
+                console.log(response)
+                this.posts = response.data;
+            } catch (e) {
+                alert('Errrrrrorrrr')
+            }
+
+        }, 
+
         inputTitle (event) {
             this.title = event.target.value;
         },

@@ -10,11 +10,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .btn {
     background: None;
-    color: teal;
-    border:4px solid teal; 
-    padding: 8px 16px;
+    color: whitesmoke;
+    border:4px solid whitesmoke; 
+    padding: 8px 32px;
+    border-radius: 50%;
+    
 }
 </style>

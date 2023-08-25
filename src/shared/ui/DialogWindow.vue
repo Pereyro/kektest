@@ -1,10 +1,7 @@
 <template>
     <div class="dialog" v-if="show == true" @click.stop="hideDialog">
         <div @click.stop class="dialog__content">
-            <slot>
-
-            </slot>
-
+            <slot></slot>
         </div>
 
     </div>
@@ -32,7 +29,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .dialog {
     top: 0;
     bottom: 0;
@@ -48,8 +45,8 @@ export default {
     margin: auto;
     background: white;
     border-radius: 12px;
-    min-width: 50px;
-    min-height: 100px;
-    padding: 24px;
+    min-width: 100px;
+    min-height: 150px;
+    padding: 32px;
 }
 </style>

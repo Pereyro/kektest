@@ -1,22 +1,24 @@
 <template>
     <div class="kekfon">
-        <movie-item :film="film1" />
-        <movie-item :film="film2" />
+        <movie-list :films="films"/>
     </div>
 </template>
 
 <script>
-import MovieItem from "@/entities/film/MovieItem";
+import MovieList from "@/entities/film/MovieList";
 
 export default {
     components: {
-        MovieItem
+        MovieList
     },
 
     data() {
         return {
-            film1: {id: 1, title: 'Jopa1', desc: 'Blabla'},
-            film2: {id: 2, title: 'Jopa2', desc: 'Blabla'}
+            films: [
+                {id: 1, title: 'Jopa1', year: 2011, desc: 'Blabla'},
+                {id: 2, title: 'Jopa2', year: 2021, desc: 'Blabla'},
+                {id: 3, title: 'Jopa3', year: 2023, desc: 'Aaaaaa'}
+            ]
         }
     },
 }
