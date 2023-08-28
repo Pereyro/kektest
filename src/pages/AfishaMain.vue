@@ -1,6 +1,16 @@
 <template>
-    <div class="kekfon">
-        <movie-list :films="films"/>
+    <div class="root">
+        <!-- <h1 class="title">Afisha</h1> -->
+        <div class="wrapper">
+            <div> </div>
+            <div>
+                <movie-list :films="films"/>
+            </div>
+            <div></div>
+
+            
+        </div>
+        
     </div>
 </template>
 
@@ -27,17 +37,5 @@ export default {
 
 
 <style scoped>
-.kekfon {
-    /* Добавьте следующие стили */
-    background-image: url('kek_fon.png');
-    background-repeat: no-repeat;
-    background-size: cover; /* Растянуть изображение на весь элемент */
-    background-position: center center; /* Позиционирование изображения по центру */
-    height: 100vh; /* Занимать всю высоту экрана */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
-}
 
 </style>

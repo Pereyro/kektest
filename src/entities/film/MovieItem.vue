@@ -7,7 +7,7 @@
         </p>
         
         <div class="movie_annotation">
-            <div><strong>Movie name:</strong> {{ film.title }}</div>
+            <div class="title"><strong>{{ film.title }}</strong></div>
             <div><strong>Year:</strong> {{ film.year }}</div>
             <div><strong>Annotation:</strong> {{ film.desc }} </div>
             
@@ -15,7 +15,9 @@
         
         <div class="button_container">
                 <my-buttons @click="$router.push(`/movies/${film.id}`)">read more</my-buttons>
-                <my-buttons @click="watchMovie" style="align-items: center;">watch</my-buttons>        
+                
+                <!-- <my-buttons @click="watchMovie" style="align-items: center;">watch</my-buttons> -->
+                        
         </div>
         
     </div>
@@ -47,9 +49,9 @@ export default {
     display: flex; 
     margin-top: 16px;
     padding: 16px;
-    border: 2px solid white;
-    background: rgba(0, 0, 0, 0.5);
-    /* border-radius:; */
+    border: 1px solid white;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 1ch;
     /* align-items: center; */
     /* bottom: 16px; */
     /* margin-right: auto; */
@@ -63,8 +65,9 @@ export default {
     float:left;
     margin-top: 4px;
     margin-left: auto;
-    border: 3px solid whitesmoke;
+    border: 1px solid whitesmoke;
     bottom: 16px;
+    border-radius: 1ch;
 }
 
 .movie_annotation {
@@ -77,7 +80,11 @@ export default {
 .button_container {
     display: flex;
     justify-content: flex-end; /* Выравнивание элементов справа */
-    margin-top: 16px;
+    /* margin-top: 16px; */
     margin-left: auto;
+    height: 30%;
+    /* border: 2px solid white; */
+    align-items: center;
+    display: flex;
 }
 </style>

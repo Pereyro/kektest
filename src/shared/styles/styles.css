@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+
+.root {
+    /* background-color:darkgreen; */
+    background-color: black;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar {
+    height: 48px;
+    background-color: black;
+    /* box-shadow: 2px 2px 4px gray; */
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    /* border: 1px solid white; */
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    border: 4px;
+    border-color: solid goldenrod;
+    height: 100%;
+}
+
+.wrapper > div {
+    /* border: 1px solid white; */
+}
+
+.title {
+    font-family: 'Rubik Moonrocks', cursive;
+    color: goldenrod;
+}

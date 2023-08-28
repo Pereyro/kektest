@@ -31,7 +31,7 @@
 <script>
 import PostForm from "@/entities/post/components/PostForm";
 import PostList from "@/entities/post/components/PostList";
-import axios from 'axios'
+import axios from 'axios';
 
 
 export default {

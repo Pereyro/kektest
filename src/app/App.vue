@@ -7,7 +7,7 @@
 
 
 <script>
-import MyNavbar from '@/app/ui/MyNavbar';
+import MyNavbar from '@/widgets/MyNavbar';
 
 export default {
     components: {

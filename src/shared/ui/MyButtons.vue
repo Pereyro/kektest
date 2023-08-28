@@ -13,10 +13,11 @@ export default {
 <style scoped>
 .btn {
     background: None;
-    color: whitesmoke;
-    border:4px solid whitesmoke; 
+    color: darkgoldenrod;
+    border:1px solid white; 
     padding: 8px 32px;
-    border-radius: 50%;
+    border-radius: 1ch;
+    background-color: gray;
     
 }
 </style>

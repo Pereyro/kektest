@@ -20,9 +20,20 @@ export default {
 
 <style scoped>
 .myinput {
-    width: 100%;
-    padding: 16px 12px;
-    border: 3px solid teal;
-    margin-top: 12px;
+    box-sizing: border-box;
+    /* width: 100%;
+    height: 100%; */
+    /* padding: 16px 12px; */
+    background-color: darkgrey;
+    border: 2px solid grey;
+    border-radius: 1ch;
+    /* margin-top: 12px; */
+    outline: none;
+}
+
+.myinput:focus {
+    border-radius: 1ch;
+    border-color: azure;
+    background-color: aliceblue;
 }
 </style>

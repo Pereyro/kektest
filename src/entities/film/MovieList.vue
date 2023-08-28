@@ -1,6 +1,5 @@
 <template>
     <div v-if="films.length > 0">
-        <h2>Film list:</h2>
         <movie-item v-for="film in films" :film='film' :key="film.id"
         />
     </div>
