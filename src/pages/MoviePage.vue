@@ -1,7 +1,18 @@
 <template>
     <div class="root">
-        <h1 class="title">{{ film.name }}</h1>
-        <p>Movie with id = {{ $route.params.id }}</p>
+        <div class="wrapper">
+            <div>
+                <p class="title">Movie with id = {{ $route.params.id }}</p>
+            </div>
+            <div><!-- <h1 class="title">{{ $route.params }}</h1> -->
+                <p class="title">Title: {{ $route.query.title }}</p>
+                <p class="title">Year: {{ $route.query.year }}</p>
+                <p class="title">Desc: {{ $route.query.desc }}</p></div>
+            <div>
+                
+            </div>
+        </div>
+        
     </div>
 </template>
 

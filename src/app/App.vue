@@ -1,5 +1,5 @@
 <template>
-    <my-navbar></my-navbar>
+    <my-navbar :isAuthenticated="isAuthenticated"></my-navbar>
     <div class="app">  
         <router-view></router-view>   
     </div>
@@ -8,13 +8,20 @@
 
 <script>
 import MyNavbar from '@/widgets/MyNavbar';
+// import AuthHelp from "@/shared/lib/AuthHelp.js";
 
 export default {
     components: {
         MyNavbar 
-    }
+    },
+    computed: {
+        isAuthenticated() {
+            return this.$store.state.isAuthenticated;
+        },
+    },
 }
 </script>
+
 
 <style>
     * {

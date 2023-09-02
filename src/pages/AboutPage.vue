@@ -1,6 +1,15 @@
 <template>
-    <div class="main__block">
-        <h1>ABOUT PAGE</h1>
+    <div class="root">
+        
+        <div class="wrapper">
+            <div></div>
+            <div>
+                <h1 class="title">KEK</h1>
+                <p class="main_text">манифест кека</p>
+            </div>
+            <div></div>
+        </div>
+        
     </div>
 </template>
 
@@ -9,7 +18,9 @@
 </script>
 
 <style scoped>
-.main__block {
+.main_text {
+    color:blanchedalmond;
+    
 
 }
 

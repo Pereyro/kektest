@@ -1,5 +1,6 @@
 <template>
     <div class="kekfon">
+        <div><img src="/images/icebear.jpeg" alt="Image 1" /></div>
 
     </div>
 </template>
@@ -14,7 +15,7 @@ export default {
 <style scoped>
 .kekfon {
     /* Добавьте следующие стили */
-    background-image: url('@/shared/images/kek_fon.png');
+    background-image: url('~/public/images/kekfon.png');
     background-repeat: no-repeat;
     background-size: cover; /* Растянуть изображение на весь элемент */
     background-position: center center; /* Позиционирование изображения по центру */

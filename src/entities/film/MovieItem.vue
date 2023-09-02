@@ -1,25 +1,18 @@
 <template>
-    <div class="movie">
-        <p>
-            <!-- <h3 class="movie_title">Movie name:</h3> -->
-            <img class="movie_icon" src=""/>
-            
-        </p>
-        
-        <div class="movie_annotation">
-            <div class="title"><strong>{{ film.title }}</strong></div>
-            <div><strong>Year:</strong> {{ film.year }}</div>
-            <div><strong>Annotation:</strong> {{ film.desc }} </div>
-            
+    <div class="movie_container">
+        <div class="movie_date"><h3 class="title">{{ film.id }}</h3></div>
+        <div class="movie"> 
+            <p><img class="movie_icon" src=""/></p>
+            <div class="movie_annotation">
+                <div class="title"><strong>{{ film.title }}</strong></div>
+                <div><strong>Year:</strong> {{ film.year }}</div>
+                <div><strong>Annotation:</strong> {{ film.desc }} </div>
+            </div>
+            <div class="button_container">
+                    <!-- <my-buttons @click="$router.push(`/movies/${film.id}`)">read more</my-buttons> -->
+                <my-buttons @click="openFilm(film)"><strong>view</strong></my-buttons>
+            </div>
         </div>
-        
-        <div class="button_container">
-                <my-buttons @click="$router.push(`/movies/${film.id}`)">read more</my-buttons>
-                
-                <!-- <my-buttons @click="watchMovie" style="align-items: center;">watch</my-buttons> -->
-                        
-        </div>
-        
     </div>
 </template>
 
@@ -36,6 +29,16 @@ export default {
     methods: {
         watchMovie() {
 
+        },
+        openFilm(film) {
+            this.$router.push({
+                path: `/movies/${film.id}`,
+                query: {
+                    title: film.title,
+                    desc: film.desc,
+                    year: film.year
+                }
+            });
         }
     }
 }
@@ -44,6 +47,22 @@ export default {
 
 
 <style scoped>
+.movie_container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.movie_date {
+    margin-top: 16px;
+    /* border: 1px solid white; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    /* width: 80px;
+    height: 80px; */
+    /* margin-bottom: auto; */
+}
 .movie {
     width:800px;
     display: flex; 
@@ -85,6 +104,5 @@ export default {
     height: 30%;
     /* border: 2px solid white; */
     align-items: center;
-    display: flex;
 }
 </style>

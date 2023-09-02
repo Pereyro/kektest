@@ -24,8 +24,8 @@ export default {
     /* width: 100%;
     height: 100%; */
     /* padding: 16px 12px; */
-    background-color: darkgrey;
-    border: 2px solid grey;
+    background-color: rgb(13, 13, 18);
+    border: 1px solid rgb(89, 85, 85);
     border-radius: 1ch;
     /* margin-top: 12px; */
     outline: none;

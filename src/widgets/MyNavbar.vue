@@ -1,27 +1,32 @@
 <template>
-    <div class="navbar">
-        <div class="navbar__buttons">
-            <button class="navbar__button" @click="$router.push('/about')">ABOUT</button>
-            <button class="navbar__button" @click="$router.push('/afisha')"><strong>AFISHA</strong></button>
-            <button class="navbar__button" @click="$router.push('/movies')">KEK HISTORY</button>
-            <button class="navbar__button" @click="$router.push('/posts')">COMMENTS</button>
+    <div class="navbar"> 
+        <div class="navbar__buttons" v-if="isAuthenticated">
+            <button class="navbar__button" @click="$router.push('/')">ABOUT</button>
+            <button class="navbar__button" @click="$router.push('/afisha')">AFISHA</button>
+            <button class="navbar__button" @click="$router.push('/posts')">MEDIA</button>
             <button class="navbar__button" @click="$router.push('/bargrill')">BAR&GRILL</button>
         </div>
+        <div class="navbar__buttons" v-else>
+            <button class="navbar__button" @click="$router.push('/')">ABOUT</button>
+        </div>
 
-        <!-- <div class="right-buttons"> -->
-            <sign-in-btn-block/>
-        <!-- </div> -->
+        <sign-in-btn-block :isAuthenticated="isAuthenticated"/>
     </div>
 </template>
 
 <script>
-import SignInBtnBlock from "@/features/SignInBtnBlock";
+import SignInBtnBlock from "@/features/UserIconBlock/SignInBtnBlock";
+
+
 export default {
     components: {
         SignInBtnBlock
-    }
-}
-
+    },
+    props: {
+        isAuthenticated: Boolean, // Определите тип свойства как Boolean
+    },
+    
+};
 </script>
     
 
@@ -49,6 +54,10 @@ export default {
 
 .navbar__button:focus {
     color: gold;
+}
+
+.navbar__button:hover {
+    color: rgb(251, 219, 43);
 }
 
 </style>

@@ -1,7 +1,4 @@
-
-// import MainAuth from "@/pages/MainAuth";
 import AfishaMain from "@/pages/AfishaMain";
-import AfishaHist from "@/pages/AfishaHist";
 import PostsPage from "@/pages/PostsPage";
 import MoviePage from "@/pages/MoviePage";
 import PostPage from "@/pages/PostPage";
@@ -9,6 +6,7 @@ import LogInPage from "@/pages/LogInPage";
 import SignInPage from "@/pages/SingInPage";
 import AboutPage from "@/pages/AboutPage";
 import BarGrillPage from "@/pages/BarGrillPage";
+
 
 import {createRouter, createWebHistory} from 'vue-router';
 
@@ -19,23 +17,23 @@ const routes = [
     },
     {
         path: "/afisha",
-        component: AfishaMain
-    },
-    {
-        path: "/movies",
-        component: AfishaHist
+        component: AfishaMain,
+        meta: { requiresAuth: true }
     },
     {
         path: "/movies/:id",
-        component: MoviePage
+        component: MoviePage, 
+        meta: { requiresAuth: true }
     },
     {
         path: "/posts",
-        component: PostsPage
+        component: PostsPage,
+        meta: { requiresAuth: true }
     },
     {
         path: "/posts/:id",
-        component: PostPage
+        component: PostPage,
+        meta: { requiresAuth: true }
     },
     {
         path: "/login",
@@ -46,19 +44,18 @@ const routes = [
         component: SignInPage
     },
     {
-        path: "/about",
-        component: AboutPage
-    },
-    {
         path: "/bargrill",
-        component: BarGrillPage
+        component: BarGrillPage,
+        meta: { requiresAuth: true }
     }
 ]
 
+
+  
 
 const router = createRouter({
     routes, 
     history: createWebHistory(process.env.BASE_URL)
 })  
-
+  
 export default router;
