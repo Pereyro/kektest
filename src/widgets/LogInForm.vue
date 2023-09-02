@@ -21,6 +21,7 @@ export default {
     methods: {
         putPass() {
             localStorage.setItem('userToken', 'myAuthToken');
+            localStorage.setItem('isAuthenticated', true);
             this.$store.dispatch('updateAuthentication', true); // Или передайте false, чтобы сменить состояние
 
             console.log('ya-ya zer gut')

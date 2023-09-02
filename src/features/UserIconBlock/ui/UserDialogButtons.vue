@@ -20,6 +20,8 @@ export default {
         doLogOut() {
             // this.isAuthenticated = false;
             this.$store.dispatch('updateAuthentication', false);
+            localStorage.removeItem('userToken')
+            localStorage.removeItem('isAuthenticated')
             this.$router.push('/login');
         }
     }

@@ -1,8 +1,12 @@
 import { createStore } from 'vuex';
 
+const initialState = {
+  isAuthenticated: false,
+};
+
 export default createStore({
   state: {
-    isAuthenticated: false,
+    isAuthenticated: localStorage.getItem('isAuthenticated') === 'true' || initialState.isAuthenticated,
   },
   mutations: {
     setAuthentication(state, isAuthenticated) {
@@ -10,9 +14,14 @@ export default createStore({
     },
   },
   actions: {
+    checkAuthentication({ state }) {
+      return state.isAuthenticated;
+    },
+    
     updateAuthentication({ commit }, isAuthenticated) {
       commit('setAuthentication', isAuthenticated);
     },
+
   },
   modules: {},
 });

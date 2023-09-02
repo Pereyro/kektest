@@ -22,10 +22,11 @@ export default {
     components: {
         SignInBtnBlock
     },
-    props: {
-        isAuthenticated: Boolean, // Определите тип свойства как Boolean
+    computed: {
+        isAuthenticated() {
+            return this.$store.state.isAuthenticated;
+        },
     },
-    
 };
 </script>
     
