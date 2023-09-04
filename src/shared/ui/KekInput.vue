@@ -29,6 +29,7 @@ export default {
     border-radius: 1ch;
     /* margin-top: 12px; */
     outline: none;
+    color:dimgrey
 }
 
 .myinput:focus {

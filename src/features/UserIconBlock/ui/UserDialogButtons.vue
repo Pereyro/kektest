@@ -1,10 +1,12 @@
 <template>
-    <div v-if="isAuthenticated==false">
+    <div v-if="isAuthenticated==false" class="btns_container">
+        <div style="height: 2px; border: 1px solid white; box-sizing: border-box; margin-top: 128px;"></div>
         <button class="user__button" @click="$router.push('/login')">LogIn</button>
     </div>
-    <div v-else-if="isAuthenticated==true">
+    <div v-else-if="isAuthenticated==true" class="btns_container">
         <button class="user__button">Kek Me</button>
         <button class="user__button">Help</button>
+        <div style="height: 2px; border: 1px solid white; box-sizing: border-box; margin-top: 48px;"></div>
         <button class="user__button" @click="doLogOut()">LogOut</button>
     </div>   
 </template>
@@ -31,6 +33,11 @@ export default {
 
 
 <style scoped>
+.btns_container {
+    flex-direction: column;
+    display: flex;
+}
+
 .user__button {
     padding: 8px 16px;
     background-color: transparent; /* Прозрачный фон */

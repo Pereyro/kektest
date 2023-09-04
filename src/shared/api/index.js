@@ -9,3 +9,16 @@ export  async function fetchFilms() {
         throw e;
     }
 }
+
+// async putPass() {
+//         try {
+//             const response = await axios.get("http://192.168.1.104:5000/getpass?pass=jopa");
+//             console.log(response)
+//         } 
+//         catch (e) {
+//             alert('Errrrrrorrrr')
+//         }
+
+//         localStorage.setItem('userToken', 'myAuthToken');
+
+    // },

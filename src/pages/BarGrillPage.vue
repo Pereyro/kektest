@@ -1,15 +1,20 @@
 <template>
     <div class="kekfon">
-        <div><img src="/images/icebear.jpeg" alt="Image 1" /></div>
+
+        <div class="pleer">
+            <video style="width: 100%; height: 100%;" controls autoplay>
+                <source src="/videos/video_2023-08-08_16-43-25.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!-- <div><img src="/images/icebear.jpeg" alt="Image 1" /></div> -->
 
     </div>
 </template>
 
 <script>
 
-export default {
-}
 </script>
+ 
 
 
 <style scoped>
@@ -30,4 +35,11 @@ export default {
 /* .title {
     /* color: aqua; */
 /* } */ 
+
+.pleer {
+    height: 600px;
+    width: 800px;
+    border: 4px solid white;
+}
+
 </style>

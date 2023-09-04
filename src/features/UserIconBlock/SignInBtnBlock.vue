@@ -1,8 +1,7 @@
 <template>
     <div class="user__form">
         <kek-input class="search_block" placeholder="search"/>
-        <!-- <button class="user_btn" @click="$router.push('/login')"><strong>UR</strong></button> -->
-        <button class="user_btn" @click="showDialog"><strong>UR</strong></button>
+        <button class="user_btn" @click="showDialog"><strong>KEK</strong></button>
         
         <drop-down-user-dialog v-model:show="dialogVisible">
             <UserDialogButtons :isAuthenticated="isAuthenticated"></UserDialogButtons>

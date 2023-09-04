@@ -1,29 +1,24 @@
 <template>
-    <div>
-        AAAAAAA!
-        <div>
-            <button @click="addLike">like</button>
-            <button @click="addDislike">dis</button>
+    <div class="root">
+        <div class="wrapper">
+            <div>
+                <button @click="addLike">like</button>
+                <button @click="addDislike">dis</button>
+                <div style="color:yellow">Count likes: <strong>{{ likes }}</strong></div>
+                <div>Count dislikes:<strong>{{ dislikes }}</strong></div>
+            </div>
+
+            <div>
+                <my-buttons @click="fetchPosts">Get Posts</my-buttons>
+                <post-list :posts="posts" @remove="removePost"/>
+            </div>
+            <div>
+                <my-buttons style="margin: 15px 0;" @click="showDialog">Create post</my-buttons>
+                <dialog-window v-model:show="dialogVisible">
+                    <post-form @create="createPost"/>
+                </dialog-window>
+            </div>
         </div>
-
-        <div>Count likes: <strong>{{ likes }}</strong></div>
-        <div>Count dislikes:<strong>{{ dislikes }}</strong></div>
-        <button @click="fetchPosts">Get Posts</button>
-        <my-buttons 
-        style="margin: 15px 0;"
-        @click="showDialog">Create post</my-buttons>
-        <dialog-window v-model:show="dialogVisible">
-            <post-form 
-                @create="createPost"
-            />
-        </dialog-window>
-       
-        <post-list 
-        :posts="posts"
-        @remove="removePost"
-        />
-
-        
     </div>
 </template>
 
