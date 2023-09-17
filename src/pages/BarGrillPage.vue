@@ -2,9 +2,9 @@
     <div class="kekfon">
 
         <div class="pleer">
-            <video style="width: 100%; height: 100%;" controls autoplay>
+            <!-- <video style="width: 100%; height: 100%;" controls autoplay>
                 <source src="/videos/video_2023-08-08_16-43-25.mp4" type="video/mp4">
-            </video>
+            </video> -->
         </div>
         <!-- <div><img src="/images/icebear.jpeg" alt="Image 1" /></div> -->
 
